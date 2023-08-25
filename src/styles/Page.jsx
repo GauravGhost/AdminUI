@@ -17,9 +17,7 @@ const Page = ({ totalPageCount, currentPage, setCurrentPage }) => {
   } = useContext(Store);
 
   return (
-    <>
       <div className="pageRoot">
-        {/* Delete selected button */}
         <div className='deleteSelectedButton'>
           <button
             onClick={() => {
@@ -31,7 +29,6 @@ const Page = ({ totalPageCount, currentPage, setCurrentPage }) => {
             Delete Selected
           </button>
         </div>
-        
         <div className='page'>
           {/* left skip button */}
           <button
@@ -48,7 +45,6 @@ const Page = ({ totalPageCount, currentPage, setCurrentPage }) => {
           >
             <AiOutlineLeft />
           </button>
-
           {/* page count map */}
           {
             pages.map((page) => {
@@ -78,7 +74,6 @@ const Page = ({ totalPageCount, currentPage, setCurrentPage }) => {
           </button>
         </div>
       </div>
-    </>
   )
 }
 

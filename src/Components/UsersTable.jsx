@@ -1,13 +1,12 @@
 import UserRow from "./UserRow"
 import '../styles/UsersTable.css'
-import { useContext} from "react"
+import { useContext } from "react"
 import { Store } from "./AdminUI"
 
 const UsersTable = () => {
-    const { currentPage, paginatedUsers, setSelected, setCheckedAll, checkedAll } = useContext(Store)
+    const {paginatedUsers, setSelected, setCheckedAll, checkedAll } = useContext(Store)
     const checkAllHandler = (e) => {
         if (e.target.checked) {
-            console.log(currentPage)
             let updateSelected = {};
             paginatedUsers.map((user) => {
                 updateSelected = { ...updateSelected, [user.id]: user.id };

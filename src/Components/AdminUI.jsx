@@ -9,6 +9,7 @@ import { paginate } from '../Utils/paginate'
 import Page from './Page'
 import SearchBar from './SearchBar'
 
+import '../styles/AdminUI.css'
 
 export const Store = createContext();
 
@@ -37,14 +38,17 @@ const AdminUI = () => {
     }
 
     return (
-        <div style={{ display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", flexWrap: "wrap" }}>
+        <div className="adminUI">
             <Store.Provider value={storeValue}>
+                {/* Search Bar */}
                 <SearchBar />
                 {
-                    !users
-                        ? "No User Found"
+                    !users.length
+                        ? "No Users Found"
                         : <>
+                            {/* UserTable  */}
                             <UsersTable />
+                            {/* page counter and delete selected  */}
                             <Page totalPageCount={totalPageCount(users.length)} currentPage={currentPage} setCurrentPage={setCurrentPage} />
                         </>
                 }
