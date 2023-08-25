@@ -1,0 +1,61 @@
+.pageRoot{
+    width: 80%;
+    text-align: center;
+    margin-top: 15px;
+    position: relative;
+}
+
+
+.page button {
+    color: white;
+    background-color: #0093ff;
+    border: 1px solid #0093ff;
+    border-radius: 50%;
+    margin-inline: 10px;
+    width: 2rem;
+    aspect-ratio: 1/1;
+    cursor: pointer;
+}
+
+.selected {
+    background-color: white !important;
+    color: black !important;
+    cursor: default !important;
+}
+
+.page button:hover{
+    background-color: #0095ffd8;
+}
+
+
+button:disabled{
+    background-color: #e4e4e4 !important;
+    border-color: #c2c2c2;
+    color: #c2c2c2;
+    cursor: not-allowed;
+}
+
+.deleteSelectedButton{
+    display: flex;
+    position: absolute;
+    border-radius: 12%;
+}
+
+.deleteSelectedButton button {
+    cursor: pointer;
+    border: none;
+    padding: 6px;
+    padding-inline: 20px;
+    border-radius: 100px;
+    color: white;
+    background-color: rgb(252, 71, 71);
+}
+.deleteSelectedButton button:hover {
+    background-color: rgba(252, 71, 71, 0.904);
+}
+
+@media (max-width: 975px) {
+    .deleteSelectedButton{
+        position: static;
+    }
+}

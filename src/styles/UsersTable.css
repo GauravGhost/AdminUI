@@ -1,0 +1,10 @@
+table, th, td {
+    padding: 13px;
+    border-bottom: 1.7px solid rgba(0, 0, 0, 0.164);
+    border-collapse: collapse;
+  }
+
+
+table {
+  overflow-x: scroll;
+}

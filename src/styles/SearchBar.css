@@ -1,0 +1,20 @@
+.SearchBar{
+    display: flex;
+    justify-content: center;
+    width: 80%;
+}
+.SearchBar input{
+    padding: 10px;
+    margin-block: 10px;
+    width: 100%;
+    outline-color: #27a7ff;
+    border: 1.5px solid #91919196;
+    border-radius: 4px;
+}
+
+.searchIcon {
+    align-self: center;
+    font-size: 25px;
+    margin-left: -30px;
+    color: #919191;
+}
